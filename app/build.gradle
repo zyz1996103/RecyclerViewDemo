@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.bawei.recyclerviewdemo"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.github.liuguangqiang.SuperRecyclerView:super-recyclerview:0.1.2'
+    compile 'com.madgag:android-viewholder-listviews:0.7'
+    compile 'io.github.openfeign:feign-okhttp:9.4.0'
+    compile 'com.survivingwithandroid:weatherlib_okhttpclient:1.6.0'
+    compile 'org.webjars.npm:react-imageloader:2.1.0'
+    compile 'com.novoda.imageloader:imageloader-core:1.6.1'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'io.github.openfeign:feign-gson:9.4.0'
+    compile 'org.mortbay.jetty:test-fragment:8.1.16.v20140903'
+}
